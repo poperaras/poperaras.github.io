@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="专业催乳师培训课程，提供产后开奶、通乳、乳房护理及母乳喂养指导。系统化实操教学，助力学员快速持证上岗，解决产后无乳、少乳及乳腺堵塞问题。">
+    <meta name="keywords" content="催奶培训,催乳师培训,产后开奶,通乳师,母乳喂养指导">
+    <title>催奶培训-专业产后母乳喂养指导与催乳师技能认证课程</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e67e22;
+            --primary-dark: #d35400;
+            --secondary-color: #2c3e50;
+            --bg-light: #f9f9f9;
+            --text-main: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white) !important;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffffff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(230, 126, 34, 0.1);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        /* 通用 Section */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        /* 问题痛点 */
+        .pain-points {
+            background: var(--white);
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: rgba(230, 126, 34, 0.2);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: rgba(230, 126, 34, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .card p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* 课程体系 */
+        .courses {
+            background: #f0f4f8;
+        }
+
+        .course-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .course-item {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .course-info h3 {
+            font-size: 20px;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .course-info p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .meta-item strong {
+            display: block;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        .meta-item span {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* 师资力量 */
+        .teachers {
+            background: var(--white);
+        }
+
+        .teacher-card {
+            text-align: center;
+        }
+
+        .teacher-img {
+            width: 100%;
+            height: 250px;
+            background-color: #eee;
+            border-radius: var(--radius);
+            margin-bottom: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .teacher-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .teacher-title {
+            color: var(--primary-color);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .teacher-desc {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* 常见问题 */
+        .faq {
+            background: #fff5f0;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: var(--secondary-color);
+            font-size: 16px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* 页脚 */
+        footer {
+            background: var(--secondary-color);
+            color: #bdc3c7;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .course-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .course-meta {
+                width: 100%;
+                justify-content: space-between;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color)"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"></path></svg>
+                母乳<span>宝典</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#pain-points">常见问题</a></li>
+                    <li><a href="#courses">培训课程</a></li>
+                    <li><a href="#teachers">师资力量</a></li>
+                    <li><a href="#faq">学员问答</a></li>
+                    <li><a href="#contact" class="cta-btn">立即咨询</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-tags">
+                    <span class="tag">国家认可证书</span>
+                    <span class="tag">小班实操</span>
+                    <span class="tag">推荐就业</span>
+                </div>
+                <h1>专业催奶培训<br>开启高薪职业新篇章</h1>
+                <p>针对产后无乳、少乳、乳房胀痛及乳腺堵塞等问题，提供科学的催乳师技能培训。理论结合临床实操，助您掌握母乳喂养指导核心技能。</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-primary">查看课程大纲</a>
+                    <a href="#contact" class="btn btn-outline">预约免费试听</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 痛点问题 -->
+        <section id="pain-points" class="pain-points">
+            <div class="container">
+                <div class="section-header">
+                    <h2>为什么选择专业催奶培训？</h2>
+                    <p>掌握科学护理知识，解决产后喂养难题</p>
+                </div>
+                <div class="grid-4">
+                    <div class="card">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+                        </div>
+                        <h3>产后无乳少乳</h3>
+                        <p>掌握科学按摩手法与穴位刺激，有效促进乳腺管疏通，提升泌乳量。</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                        </div>
+                        <h3>乳房胀痛红肿</h3>
+                        <p>学习正确的排乳技巧与冷热敷理疗方法，缓解乳房硬块与疼痛。</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h3>乳腺管堵塞</h3>
+                        <p>通过专业手法与仪器辅助，疏通乳腺管，预防乳腺炎发生。</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3>职业发展前景</h3>
+                        <p>随着母乳喂养观念普及，专业催乳师需求量大，就业渠道广阔。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 培训课程 -->
+        <section id="courses" class="courses">
+            <div class="container">
+                <div class="section-header">
+                    <h2>系统化课程体系</h2>
+                    <p>从理论到实操，全方位打造金牌催乳师</p>
+                </div>
+                <div class="course-list">
+                    <div class="course-item">
+                        <div class="course-info">
+                            <h3>初级催乳师技能班</h3>
+                            <p>适合零基础学员，重点学习乳房解剖生理、母乳喂养基础知识及基础开奶手法。</p>
+                        </div>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <strong>7天</strong>
+                                <span>培训周期</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong>3000+</strong>
+                                <span>实操人次</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong>¥2980</strong>
+                                <span>学费优惠</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-item">
+                        <div class="course-info">
+                            <h3>高级通乳与产后修复班</h3>
+                            <p>深度解析疑难杂症，掌握乳头凹陷矫正、乳腺炎预防、回乳及产后乳房塑形技术。</p>
+                        </div>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <strong>15天</strong>
+                                <span>培训周期</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong>小班</strong>
+                                <span>手把手教学</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong>¥5800</strong>
+                                <span>含考证费</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-item">
+                        <div class="course-info">
+                            <h3>家庭护理与营养指导班</h3>
+                            <p>结合中医食疗与家庭护理技巧，指导产妇科学饮食，解决家庭喂养难题。</p>
+                        </div>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <strong>5天</strong>
+                                <span>培训周期</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong>灵活</strong>
+                                <span>周末/晚班</span>
+                            </div>
+                            <div class="meta-item">
+                                <strong>¥1680</strong>
+                                <span>学费优惠</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 师资力量 -->
+        <section id="teachers" class="teachers">
+            <div class="container">
+                <div class="section-header">
+                    <h2>行业资深专家团队</h2>
+                    <p>由拥有多年临床经验的资深催乳师授课</p>
+                </div>
+                <div class="grid-4">
+                    <div class="teacher-card">
+                        <div class="teacher-img">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+                        </div>
+                        <div class="teacher-name">李华 教授</div>
+                        <div class="teacher-title">首席讲师 / 主任医师</div>
+                        <div class="teacher-desc">从事妇产科临床工作20年，擅长乳腺疑难杂症诊断与治疗。</div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-img">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+                        </div>
+                        <div class="teacher-name">王芳 资深导师</div>
+                        <div class="teacher-title">金牌催乳师 / 技术总监</div>
+                        <div class="teacher-desc">实操手法细腻，累计服务产妇超5000例，好评率98%。</div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-img">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+                        </div>
+                        <div class="teacher-name">张伟 营养师</div>
+                        <div class="teacher-title">母乳喂养指导师</div>
+                        <div class="teacher-desc">国家二级营养师，精通产后营养搭配与催乳食疗方研发。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>学员常见问题解答</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">零基础可以学习催奶培训吗？ <span>+</span></div>
+                        <div class="faq-answer">完全可以。我们的课程专门针对零基础学员设计，从解剖学基础开始，循序渐进，确保每位学员都能掌握核心技术。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">培训结束后颁发什么证书？ <span>+</span></div>
+                        <div class="faq-answer">培训合格者将颁发行业认可的《高级催乳师职业资格证书》及结业证明，证书全国通用，可作为求职上岗的凭证。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">学习期间是否有真人实操机会？ <span>+</span></div>
+                        <div class="faq-answer">是的，我们坚持“手把手”教学模式，所有学员均有充足的真人乳房模型及真实产妇实操机会，确保上手能力。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">毕业后推荐就业吗？ <span>+</span></div>
+                        <div class="faq-answer">学院与多家月子中心、母婴护理机构及医院乳腺科有长期合作，优秀学员可获得优先推荐就业机会。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系/CTA -->
+        <section id="contact" style="background: var(--secondary-color); color: white; text-align: center;">
+            <div class="container">
+                <h2 style="margin-bottom: 20px;">立即开启您的职业之旅</h2>
+                <p style="margin-bottom: 40px; color: #bdc3c7;">名额有限，现在咨询即可享受早鸟优惠</p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="tel:400-123-4567" class="btn" style="background: var(--primary-color); color: white;">400-123-4567</a>
+                    <a href="mailto:contact@mommybook.com" class="btn" style="border: 1px solid white; color: white;">发送邮件咨询</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 14px; line-height: 1.8;">专注产后健康与母婴护理领域，致力于培养高素质的催乳师人才，推动母乳喂养科学化、规范化。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#courses">课程介绍</a></li>
+                        <li><a href="#teachers">师资团队</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>培训项目</h4>
+                    <ul>
+                        <li><a href="#">催乳师培训</a></li>
+                        <li><a href="#">产后修复</a></li>
+                        <li><a href="#">母婴护理</a></li>
+                        <li><a href="#">小儿推拿</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>地址：北京市朝阳区母婴产业园区A座</li>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：contact@mommybook.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 母乳宝典培训学院 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的交互逻辑：FAQ折叠效果
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const answer = item.nextElementSibling;
+                const isActive = item.classList.contains('active');
+                
+                // 关闭所有其他项
+                document.querySelectorAll('.faq-question').forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    otherItem.nextElementSibling.style.display = 'none';
+                    otherItem.querySelector('span').textContent = '+';
+                });
+
+                // 切换当前项
+                if (!isActive) {
+                    item.classList.add('active');
+                    answer.style.display = 'block';
+                    item.querySelector('span').textContent = '-';
+                }
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+                      </html>
