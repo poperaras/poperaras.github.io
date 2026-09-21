@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="汉宫春晓图技法详解：深入解析仇英工笔重彩仕女画的艺术特色、构图布局、色彩运用及笔墨技法。">
+    <meta name="keywords" content="汉宫春晓图,仇英,工笔重彩,仕女画,构图技法,青绿山水">
+    <title>汉宫春晓图技法-工笔重彩仕女画与青绿山水的艺术解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B2E2E; /* 宫墙红 */
+            --secondary-color: #2C5F2D; /* 竹叶绿 */
+            --accent-color: #D4AF37; /* 金箔色 */
+            --bg-color: #F9F7F2; /* 宣纸白 */
+            --text-main: #2C2C2C;
+            --text-light: #666666;
+            --border-color: #E0Dcd3;
+            --container-width: 1200px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Songti SC", "SimSun", "STSong", "serif"; /* 使用宋体增强古典韵味 */
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/hanpalace/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-family: "Kaiti SC", "KaiTi", serif;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.2s;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn:hover {
+            background-color: #6b1e1e;
+            transform: translateY(-2px);
+        }
+
+        /* 通用区块样式 */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-family: "Kaiti SC", "KaiTi", serif;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 0 auto;
+        }
+
+        /* 核心技法卡片 */
+        .techniques-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .tech-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tech-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            font-family: "Kaiti SC", "KaiTi", serif;
+        }
+
+        .tech-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .tech-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        /* 细节解析区域 */
+        .analysis-section {
+            background-color: #fff;
+        }
+
+        .analysis-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .analysis-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .analysis-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .analysis-image img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 8px solid #fff;
+        }
+
+        .analysis-list li {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .analysis-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        /* 构图布局 */
+        .layout-section {
+            background-color: var(--bg-color);
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .layout-item {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .layout-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .layout-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: #fff;
+        }
+
+        .layout-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* 色彩分析 */
+        .color-section {
+            background-color: #fff;
+        }
+
+        .color-wheel {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .color-block {
+            text-align: center;
+        }
+
+        .color-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .color-name {
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .color-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* 常见问题 */
+        .faq-section {
+            background-color: var(--bg-color);
+        }
+
+        .faq-item {
+            background: #fff;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-light);
+            background-color: #fff;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 20px 20px 20px;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        .faq-item .faq-question::before {
+            content: '+';
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2b2b2b;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.85rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .layout-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                汉宫春晓 <span>技法解析</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#overview" class="active">作品概述</a></li>
+                    <li><a href="#techniques">笔墨技法</a></li>
+                    <li><a href="#composition">构图布局</a></li>
+                    <li><a href="#colors">色彩运用</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>工笔重彩的巅峰之作</h1>
+                <p>深入解析仇英《汉宫春晓图》的线条、设色与空间营造，领略明代院体画的细腻与繁华。</p>
+                <a href="#techniques" class="btn">探索技法细节</a>
+            </div>
+        </section>
+
+        <!-- 技法概览 -->
+        <section id="overview" class="container">
+            <div class="section-header">
+                <h2>作品概述</h2>
+                <div class="divider"></div>
+                <p>仇英《汉宫春晓图》为明代工笔重彩长卷，被誉为“中国十大传世名画”之一。作品以春日晨曦中的汉代宫廷为背景，描绘了宫中女子梳妆、奏乐、歌舞、戏婴等生活场景。</p>
+            </div>
+        </section>
+
+        <!-- 核心技法 -->
+        <section id="techniques" class="layout-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心笔墨技法</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="techniques-grid">
+                    <article class="tech-card">
+                        <div class="tech-icon">✎</div>
+                        <h3>铁线描与兰叶描</h3>
+                        <p>画中仕女衣纹多用高古游丝描与铁线描，线条细劲连绵，圆润流畅，极富弹性。这种技法既表现了丝绸的质感，又凸显了人物身体的柔美曲线。</p>
+                    </article>
+                    <article class="tech-card">
+                        <div class="tech-icon">🖌</div>
+                        <h3>层层渲染</h3>
+                        <p>在人物面部、手部及衣纹褶皱处，运用了极其细致的渲染技法。通过多层淡墨与色彩的叠加，营造出丰富的光影层次和体积感，使人物形象饱满立体。</p>
+                    </article>
+                    <article class="tech-card">
+                        <div class="tech-icon">🪵</div>
+                        <h3>界画技法</h3>
+                        <p>画中宫殿建筑严谨工整，门窗、梁柱结构清晰，体现了画家高超的“界画”功底。线条横平竖直，转折处棱角分明，展现了宏大的建筑空间。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 构图与细节 -->
+        <section id="composition" class="analysis-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>构图与空间布局</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="analysis-content">
+                    <div class="analysis-text">
+                        <h3>移步换景的长卷结构</h3>
+                        <p>全卷长达555.3厘米，采用散点透视法，随着视线的移动，宫苑内的楼台亭阁、花草树木依次展开。画家巧妙地将不同时间、不同场景融合在同一画面中。</p>
+                        <br>
+                        <h3>疏密有致的节奏感</h3>
+                        <p>在人物安排上，既有成组的奏乐、舞蹈场面，也有独处的梳妆、读书人物。通过人物的聚散、开合，形成富有韵律的画面节奏，避免了视觉疲劳。</p>
+                        <br>
+                        <ul class="analysis-list">
+                            <li><strong>近景刻画：</strong> 树木、花石、屏风等细节刻画入微，增加画面的纵深感。</li>
+                            <li><strong>中景主体：</strong> 宫女活动占据主要视觉中心，线条流畅，神态各异。</li>
+                            <li><strong>远景烘托：</strong> 宫殿楼阁高耸，云雾缭绕，营造出仙境般的氛围。</li>
+                        </ul>
+                    </div>
+                    <div class="analysis-image">
+                        <img src="https://picsum.photos/seed/chinesepainting/600/400.jpg" alt="工笔仕女画细节赏析">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 色彩运用 -->
+        <section id="colors" class="color-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>色彩运用</h2>
+                    <div class="divider"></div>
+                </div>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 30px;">
+                    《汉宫春晓图》继承了宋代院体画的色彩传统，以石青、石绿等矿物颜料为主，色彩富丽堂皇，典雅庄重。
+                </p>
+                <div class="color-wheel">
+                    <div class="color-block">
+                        <div class="color-circle" style="background-color: #8B2E2E;"></div>
+                        <div class="color-name">宫墙红</div>
+                        <div class="color-desc">用于宫殿建筑与服饰主色，营造庄重氛围。</div>
+                    </div>
+                    <div class="color-block">
+                        <div class="color-circle" style="background-color: #2C5F2D;"></div>
+                        <div class="color-name">翠竹绿</div>
+                        <div class="color-desc">表现庭院中的植物生机，对比鲜明。</div>
+                    </div>
+                    <div class="color-block">
+                        <div class="color-circle" style="background-color: #D4AF37;"></div>
+                        <div class="color-name">流金黄</div>
+                        <div class="color-desc">用于装饰纹样与花木，增添华贵气息。</div>
+                    </div>
+                    <div class="color-block">
+                        <div class="color-circle" style="background-color: #5C4033;"></div>
+                        <div class="color-name">黛青色</div>
+                        <div class="color-desc">用于远景山石与阴影，沉稳而深邃。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>技法常见问题</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">《汉宫春晓图》属于哪种绘画风格？</div>
+                        <div class="faq-answer">
+                            该画属于工笔重彩画，重点在于精细的线条勾勒和厚重的色彩渲染，是明代院体画的代表作。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">画中人物的服饰色彩有什么特点？</div>
+                        <div class="faq-answer">
+                            服饰色彩丰富且层次分明，主要运用了朱红、石绿、赭石等传统矿物颜料，色彩对比强烈且耐看。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何理解画中的“界画”技法？</div>
+                        <div class="faq-answer">
+                            界画是使用界尺辅助画直线的技法，画中宫殿建筑结构严谨、比例准确，正是界画技法的完美体现。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">仇英的线条有什么独特之处？</div>
+                        <div class="faq-answer">
+                            仇英的线条以“高古游丝描”为主，线条细劲连绵，如春蚕吐丝，极富表现力，能完美展现丝绸的质感。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p>致力于传统工笔画技法的研究与传播，解析名作背后的艺术逻辑与制作工艺。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>相关技法</h4>
+                    <ul>
+                        <li><a href="#">工笔设色</a></li>
+                        <li><a href="#">青绿山水</a></li>
+                        <li><a href="#">界画技法</a></li>
+                        <li><a href="#">仕女画</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源推荐</h4>
+                    <ul>
+                        <li><a href="#">名画高清图</a></li>
+                        <li><a href="#">笔墨教程</a></li>
+                        <li><a href="#">色彩搭配</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 汉宫春晓图技法解析. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 折叠交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                item.querySelector('.faq-question').addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+
+            // 导航栏平滑滚动
+            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
