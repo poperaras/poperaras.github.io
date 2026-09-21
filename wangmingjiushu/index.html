@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亡命救赎-硬核犯罪悬疑小说阅读与深度解析平台</title>
+    <meta name="description" content="亡命救赎专注于硬核犯罪悬疑小说与影视资源的深度解析。提供最新章节更新、人物心理侧写、剧情逻辑推演及影视改编对比，为悬疑文学爱好者提供沉浸式阅读体验与理性分析社区。">
+    <meta name="keywords" content="亡命救赎, 犯罪悬疑, 小说推荐, 影视解析, 悬疑推理, 心理惊悚">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-dark: #0f1115;
+            --bg-card: #1a1d24;
+            --bg-card-hover: #232730;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a4b0;
+            --accent-red: #e74c3c;
+            --accent-gold: #d4af37;
+            --border-color: #2c3038;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            color: var(--text-primary);
+            border-left: 4px solid var(--accent-red);
+            padding-left: 1rem;
+        }
+
+        .section-title span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-left: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 17, 21, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-red);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-red);
+        }
+
+        .search-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(to right, rgba(15,17,21,0.95) 0%, rgba(15,17,21,0.7) 50%, rgba(15,17,21,0.4) 100%),
+                        url('https://picsum.photos/seed/crime/1600/900') center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background-color: rgba(231, 76, 60, 0.2);
+            color: var(--accent-red);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-red);
+            color: white;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--text-secondary);
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-primary);
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Featured Section */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .book-card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--accent-red);
+        }
+
+        .card-img {
+            height: 280px;
+            background-color: #2c3038;
+            position: relative;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-rating {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.8);
+            color: var(--accent-gold);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-category {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .card-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+            padding-top: 0.75rem;
+            margin-top: auto;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .rank-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background-color: var(--border-color);
+            color: var(--text-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background-color: var(--accent-gold); color: #000; }
+        .rank-list li:nth-child(2) .rank-num { background-color: #bfa15f; color: #000; }
+        .rank-list li:nth-child(3) .rank-num { background-color: #cd7f32; color: #000; }
+
+        .rank-info {
+            flex: 1;
+        }
+
+        .rank-title {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+
+        .rank-chapter {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        /* Analysis Section */
+        .analysis-section {
+            background-color: #16191f;
+            padding: 4rem 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .analysis-card {
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .analysis-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+        }
+
+        .analysis-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .analysis-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0b0e;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-col h4 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-red);
+        }
+
+        .copyright {
+            margin-top: 3rem;
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+            nav ul {
+                margin-top: 1rem;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero {
+                height: 400px;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">亡命<span>救赎</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">小说连载</a></li>
+                    <li><a href="#">影视改编</a></li>
+                    <li><a href="#">人物档案</a></li>
+                    <li><a href="#">深度解析</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">搜索</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <span class="hero-tag">硬核悬疑 / 心理惊悚</span>
+                <h1>在深渊边缘寻找<br>唯一的真实</h1>
+                <p>这里是亡命救赎的专属领域。深度剖析犯罪心理，还原案件背后的逻辑链条，为迷失的灵魂提供理性的阅读出口。</p>
+                <div>
+                    <a href="#" class="btn">开始阅读</a>
+                    <a href="#" class="btn btn-outline">浏览榜单</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="container">
+            <div class="main-grid">
+                <!-- Left Column: Featured Books -->
+                <section>
+                    <div class="section-title">
+                        本周热门推荐
+                        <span>Hot Picks</span>
+                    </div>
+                    <div class="featured-grid">
+                        <!-- Card 1 -->
+                        <article class="book-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/seed/crime1/300/400" alt="封面图">
+                                <span class="card-rating">9.8</span>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-category">犯罪小说</span>
+                                <h3 class="card-title">灰烬中的谎言</h3>
+                                <p class="card-desc">一名退休的刑警在整理旧档案时，发现了一桩被掩盖了二十年的连环杀人案，而凶手似乎正站在他的身后...</p>
+                                <div class="card-meta">
+                                    <span>作者: 雷蒙德</span>
+                                    <span>更新至: 第42章</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="book-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/seed/crime2/300/400" alt="封面图">
+                                <span class="card-rating">9.5</span>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-category">心理惊悚</span>
+                                <h3 class="card-title">双面囚徒</h3>
+                                <p class="card-desc">当主角在精神病院醒来，他发现自己必须通过解开心理谜题来证明自己没有疯，否则将面临终身监禁。</p>
+                                <div class="card-meta">
+                                    <span>作者: 斯科特</span>
+                                    <span>连载中</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="book-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/seed/crime3/300/400" alt="封面图">
+                                <span class="card-rating">9.2</span>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-category">黑色电影</span>
+                                <h3 class="card-title">夜行列车</h3>
+                                <p class="card-desc">一辆午夜开往荒漠的火车上，七个互不相识的乘客被迫共同面对一场突如其来的生存危机。</p>
+                                <div class="card-meta">
+                                    <span>作者: 罗伯特</span>
+                                    <span>完结</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="book-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/seed/crime4/300/400" alt="封面图">
+                                <span class="card-rating">9.0</span>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-category">法律推理</span>
+                                <h3 class="card-title">无罪辩护</h3>
+                                <p class="card-desc">顶尖辩护律师接手了一个看似毫无希望的死刑案，随着调查深入，真相比预想的更加血腥。</p>
+                                <div class="card-meta">
+                                    <span>作者: 查理</span>
+                                    <span>连载中</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <a href="#" style="color: var(--accent-red); font-weight: 600;">查看更多作品 &rarr;</a>
+                    </div>
+                </section>
+
+                <!-- Right Column: Sidebar -->
+                <aside>
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">本周阅读榜单</h4>
+                        <ul class="rank-list">
+                            <li>
+                                <span class="rank-num">1</span>
+                                <div class="rank-info">
+                                    <a href="#" class="rank-title">无声的证词</a>
+                                    <span class="rank-chapter">最新: 第15卷 第3章</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="rank-num">2</span>
+                                <div class="rank-info">
+                                    <a href="#" class="rank-title">逃离地心引力</a>
+                                    <span class="rank-chapter">最新: 第08卷 第2章</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="rank-num">3</span>
+                                <div class="rank-info">
+                                    <a href="#" class="rank-title">最后的守夜人</a>
+                                    <span class="rank-chapter">最新: 第12卷 第5章</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="rank-num">4</span>
+                                <div class="rank-info">
+                                    <a href="#" class="rank-title">迷雾侦探社</a>
+                                    <span class="rank-chapter">最新: 第09卷 第1章</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="rank-num">5</span>
+                                <div class="rank-info">
+                                    <a href="#" class="rank-title">深渊凝视</a>
+                                    <span class="rank-chapter">最新: 第11卷 第8章</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">热门标签</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                            <a href="#" style="background: var(--border-color); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">连环杀人</a>
+                            <a href="#" style="background: var(--border-color); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">心理博弈</a>
+                            <a href="#" style="background: var(--border-color); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">刑侦破案</a>
+                            <a href="#" style="background: var(--border-color); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">越狱</a>
+                            <a href="#" style="background: var(--border-color); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">法庭辩论</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">阅读指南</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
+                            本站收录的悬疑小说均为原创或授权作品，请读者在合法合规的前提下进行阅读。
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                            如发现违规内容，请联系我们进行下架处理。
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <!-- Analysis Section -->
+        <section class="analysis-section">
+            <div class="container">
+                <div class="section-title">
+                    深度解析与评论
+                    <span>Deep Dive</span>
+                </div>
+                <div class="analysis-grid">
+                    <div class="analysis-card">
+                        <div class="analysis-icon">🔍</div>
+                        <h3>剧情逻辑推演</h3>
+                        <p>不只是看故事，我们提供专业的剧情逻辑分析。从伏笔埋设到反转设计，拆解悬疑作品的叙事艺术。</p>
+                        <a href="#" style="color: var(--accent-red); font-weight: 600; font-size: 0.9rem;">阅读更多 &rarr;</a>
+                    </div>
+                    <div class="analysis-card">
+                        <div class="analysis-icon">👤</div>
+                        <h3>人物心理侧写</h3>
+                        <p>深入罪犯与侦探的内心世界。探讨犯罪心理学、动机分析以及人物成长弧光，还原真实的人性挣扎。</p>
+                        <a href="#" style="color: var(--accent-red); font-weight: 600; font-size: 0.9rem;">阅读更多 &rarr;</a>
+                    </div>
+                    <div class="analysis-card">
+                        <div class="analysis-icon">🎬</div>
+                        <h3>影视改编对比</h3>
+                        <p>小说与影视剧的碰撞。分析改编得失，探讨影像语言如何重构文字魅力，寻找最适合的故事载体。</p>
+                        <a href="#" style="color: var(--accent-red); font-weight: 600; font-size: 0.9rem;">阅读更多 &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col" style="max-width: 300px;">
+                    <a href="#" class="logo" style="display: block; margin-bottom: 1rem;">亡命<span>救赎</span></a>
+                    <p style="color: var(--text-secondary);">
+                        致力于为悬疑文学爱好者打造最优质的阅读平台与深度分析社区。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>栏目导航</h4>
+                    <ul>
+                        <li><a href="#">最新小说</a></li>
+                        <li><a href="#">高分榜单</a></li>
+                        <li><a href="#">影视解说</a></li>
+                        <li><a href="#">作者专区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 亡命救赎. All Rights Reserved. 本站内容仅供学习交流，请勿用于商业用途。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                              </html>
