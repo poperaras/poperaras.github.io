@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>春丽的劫难 - 沉浸式同人剧情与视觉鉴赏</title>
+    <meta name="description" content="探索春丽的劫难同人作品世界。本站收录高质量春丽同人漫画、剧情解析、角色深度图鉴及同人创作指南，为春丽爱好者提供沉浸式的视觉与阅读体验。">
+    <meta name="keywords" content="春丽的劫难, 春丽同人, 漫画鉴赏, 同人创作, 春丽角色图鉴">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff4d4d;
+            --secondary-color: #2c3e50;
+            --accent-color: #f1c40f;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --spacing-unit: 1rem;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://picsum.photos/seed/chunli_hero/1920/1080');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            mix-blend-mode: overlay;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn Up 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 77, 77, 0.6);
+            background-color: #ff6666;
+        }
+
+        /* Main Content Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px var(--spacing-unit);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Spotlight Section */
+        .spotlight-section {
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin-bottom: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .spotlight-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .spotlight-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .spotlight-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .spotlight-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .spotlight-text p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Character Traits */
+        .traits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .trait-item {
+            text-align: center;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 8px;
+        }
+
+        .trait-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            display: none;
+            padding-left: 20px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: '+';
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 60px 0 20px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bbb;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .spotlight-section {
+                flex-direction: column;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>春丽</span>劫难
+            </a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#gallery">精选画廊</a></li>
+                    <li><a href="#character">角色图鉴</a></li>
+                    <li><a href="#guide">创作指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>春丽的劫难</h1>
+                <p>探索街头霸王传奇女格斗家背后的黑暗面。沉浸于同人创作的艺术世界，感受角色命运的跌宕起伏。</p>
+                <a href="#gallery" class="cta-button">开始探索</a>
+            </div>
+        </section>
+
+        <!-- Spotlight / Featured Work -->
+        <section class="container">
+            <div class="spotlight-section">
+                <div class="spotlight-image">
+                    <img src="https://picsum.photos/seed/chunli_drama/600/400" alt="春丽劫难精选封面">
+                </div>
+                <div class="spotlight-text">
+                    <h3>深度解析：命运的重压</h3>
+                    <p>在“春丽的劫难”这一主题下，创作者们往往不再聚焦于街头霸王大赛的胜负，而是深入挖掘角色内心深处的创伤与挣扎。这不仅仅是关于战斗的描写，更是关于如何在绝境中寻找尊严的史诗。</p>
+                    <p>本站为您精选了最具代表性的同人作品，通过细腻的笔触和宏大的叙事，还原了春丽在打击跨国犯罪集团过程中所面临的每一次危机与考验。</p>
+                    <div class="traits-grid">
+                        <div class="trait-item">
+                            <span class="trait-icon">⚔️</span>
+                            <h4>硬核格斗</h4>
+                        </div>
+                        <div class="trait-item">
+                            <span class="trait-icon">💔</span>
+                            <h4>情感羁绊</h4>
+                        </div>
+                        <div class="trait-item">
+                            <span class="trait-icon">🥋</span>
+                            <h4>角色重塑</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="container">
+            <div class="section-title">
+                <h2>精选画廊</h2>
+                <p>精选最具视觉冲击力的同人作品与场景还原</p>
+            </div>
+            <div class="grid-3">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-tag">剧情向</span>
+                        <img src="https://picsum.photos/seed/chunli_scene1/400/300" alt="暗夜突袭">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">暗夜突袭：红莲的代价</h3>
+                        <p class="card-desc">春丽在追踪幕后黑手的过程中，遭遇了前所未有的伏击。这一章节着重描写了她在受伤后的心理防线崩塌与重建。</p>
+                        <div class="card-meta">
+                            <span>阅读量: 12k+</span>
+                            <a href="#" class="read-more">阅读全文 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-tag">视觉系</span>
+                        <img src="https://picsum.photos/seed/chunli_scene2/400/300" alt="决战前夜">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">决战前夜的独白</h3>
+                        <p class="card-desc">通过静谧的夜景与雨景，展现春丽对身世的迷茫与对未来的渴望。这幅作品在视觉风格上大胆尝试了赛博朋克与水墨的结合。</p>
+                        <div class="card-meta">
+                            <span>阅读量: 8.5k+</span>
+                            <a href="#" class="read-more">阅读全文 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-tag">羁绊</span>
+                        <img src="https://picsum.photos/seed/chunli_scene3/400/300" alt="战友重逢">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">废墟中的重逢</h3>
+                        <p class="card-desc">在经历了重重劫难后，春丽与老友在绝境中重逢。这一幕不仅是对剧情的推动，更是对角色间深厚情谊的最好诠释。</p>
+                        <div class="card-meta">
+                            <span>阅读量: 15k+</span>
+                            <a href="#" class="read-more">阅读全文 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Character Guide -->
+        <section id="character" class="container" style="background-color: #fff; border-radius: 8px; padding: 40px; margin-bottom: 60px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <div class="section-title">
+                <h2>角色图鉴：从街头霸王到劫难</h2>
+                <p>理解“春丽的劫难”主题，需要了解角色在原作背景下的基础设定</p>
+            </div>
+            <div class="grid-3">
+                <div style="text-align: center; padding: 20px;">
+                    <img src="https://picsum.photos/seed/chunli_portrait/200/200" alt="春丽肖像" style="border-radius: 50%; margin-bottom: 15px; border: 4px solid var(--primary-color);">
+                    <h3 style="margin-bottom: 10px;">李凤</h3>
+                    <p style="color: #666; font-size: 0.9rem;">为了寻找失踪的父亲，春丽投身于打击跨国犯罪集团“生物工程研究所”的行动中。她的劫难往往源于这种执念带来的危险。</p>
+                </div>
+                <div style="text-align: center; padding: 20px;">
+                    <h3 style="margin-bottom: 10px;">核心能力</h3>
+                    <ul style="color: #666; font-size: 0.9rem; list-style: disc; padding-left: 20px; line-height: 1.8;">
+                        <li><strong>气功拳：</strong>积攒能量释放的强力攻击。</li>
+                        <li><strong>百裂脚：</strong>高速连续踢击，是连招的核心。</li>
+                        <li><strong>回旋鹤脚蹴：</strong>从空中下落的强力踢技。</li>
+                        <li><strong>气功掌：</strong>近距离发出的能量波。</li>
+                    </ul>
+                </div>
+                <div style="text-align: center; padding: 20px;">
+                    <h3 style="margin-bottom: 10px;">角色定位</h3>
+                    <p style="color: #666; font-size: 0.9rem;">在“春丽的劫难”同人语境下，她不仅是格斗家，更是背负着沉重宿命的复仇者。作品常侧重描写她如何克服生理和心理的双重极限。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container">
+            <div class="section-title">
+                <h2>常见问题</h2>
+                <p>关于春丽同人作品与阅读体验的解答</p>
+            </div>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">什么是“春丽的劫难”主题？</div>
+                    <div class="faq-answer">
+                        这是一个在春丽同人创作中常见的主题，通常指代那些剧情走向黑暗、充满危机感或悲剧色彩的作品。它不同于传统热血漫画的胜利结局，更侧重于角色在逆境中的挣扎与成长。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">这些作品是官方续作吗？</div>
+                    <div class="faq-answer">
+                        不是。本站展示的内容均为同人创作。它们基于CAPCOM官方的角色设定，但由独立作者进行二次创作，剧情和结局完全由作者自行决定。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何开始阅读春丽相关的同人漫画？</div>
+                    <div class="faq-answer">
+                        您可以浏览本站的“精选画廊”栏目，点击“阅读全文”即可跳转至支持该作品的阅读平台。我们推荐使用支持高清图片的浏览器以获得最佳体验。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">我可以投稿自己的作品吗？</div>
+                    <div class="faq-answer">
+                        目前本站主要作为展示与鉴赏平台。如果您有高质量的作品想要展示，请通过网站底部的联系方式与我们联系。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="color: #bbb; font-size: 0.9rem;">春丽劫难是一个专注于《街头霸王》系列角色春丽的同人作品鉴赏与资讯平台。我们致力于挖掘角色魅力，推广优秀的同人创作。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#home">回到首页</a></li>
+                    <li><a href="#gallery">精选画廊</a></li>
+                    <li><a href="#character">角色图鉴</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>法律声明</h4>
+                <ul>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 春丽劫难鉴赏站. All Rights Reserved. 本站内容仅供学习与交流使用.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('show');
+        }
+
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentNode;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('nav-list').classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
