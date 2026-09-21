@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="穿越火线潘多拉攻略：潘多拉角色深度解析、获取方式、属性对比、皮肤特效及实战技巧指南。">
+    <meta name="keywords" content="穿越火线潘多拉,穿越火线角色,潘多拉获取,潘多拉属性,CF手游">
+    <title>穿越火线潘多拉-角色深度解析与实战获取指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f; /* 战斗红 */
+            --secondary-color: #1976d2; /* 科技蓝 */
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent-gold: #ffb300;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/cf_pandora_bg/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeIn Up 0.8s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.8);
+            background: linear-gradient(45deg, #fff, var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #ddd;
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+            box-shadow: 0 0 15px rgba(211, 47, 47, 0.5);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+        }
+
+        /* Character Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Guide Layout */
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        .guide-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1rem;
+        }
+
+        .guide-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .guide-list {
+            margin-bottom: 2rem;
+        }
+
+        .guide-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+
+        .guide-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .sidebar {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 0.5rem;
+            border-radius: 4px;
+            background-color: #2a2a2a;
+            font-size: 0.95rem;
+        }
+
+        .sidebar a:hover {
+            background-color: #333;
+            color: var(--primary-color);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+
+        .comparison-table th {
+            background-color: #252525;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #2a2a2a;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 3rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid #333;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #222;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                CF<span>攻略站</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">角色图鉴</a></li>
+                    <li><a href="#">武器库</a></li>
+                    <li><a href="#">活动资讯</a></li>
+                    <li><a href="#">社区论坛</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>穿越火线潘多拉</h1>
+                <p>拥有高机动性与独特技能的生化角色，掌握战场主动权的关键。</p>
+                <a href="#guide" class="cta-btn">查看详细攻略</a>
+            </div>
+        </section>
+
+        <!-- Character Stats -->
+        <section class="container">
+            <div class="section-title">
+                <h2>潘多拉核心属性</h2>
+                <p>深入了解角色的基础数据与实战表现</p>
+            </div>
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <span class="stat-icon">⚡</span>
+                    <div class="stat-value">150%</div>
+                    <div class="stat-label">移动速度</div>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-icon">🛡️</span>
+                    <div class="stat-value">50%</div>
+                    <div class="stat-label">防弹能力</div>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-icon">🔮</span>
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">技能次数/局</div>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-icon">🎯</span>
+                    <div class="stat-value">优</div>
+                    <div class="stat-label">生化模式评级</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Main Guide -->
+        <section class="container" id="guide">
+            <div class="section-title">
+                <h2>角色深度解析</h2>
+                <p>潘多拉不仅仅是一个外观华丽的角色，更是生化模式中的战术核心。</p>
+            </div>
+
+            <div class="guide-layout">
+                <div class="guide-content">
+                    <h3>技能机制详解</h3>
+                    <p>潘多拉的技能“生化变身”允许她在短时间内进入更高强度的生化形态。在变身状态下，角色的移动速度和跳跃高度都会得到显著提升，能够轻松跨越常规障碍物，这对于在生化模式中躲避僵尸围攻或快速追击落单玩家至关重要。</p>
+                    
+                    <h3>实战应用场景</h3>
+                    <ul class="guide-list">
+                        <li><strong>运球手：</strong> 变身后的高机动性使其成为运送生化手雷（EVO）的最佳人选，能有效甩开追击的僵尸。</li>
+                        <li><strong>突围战术：</strong> 在团队竞技或爆破模式的生化酒店等地图中，利用变身技能可以快速从包点突围。</li>
+                        <li><strong>防守反击：</strong> 在防守点，变身状态下的跳跃能力可以让你占据高点，提前预判僵尸的进攻路线。</li>
+                    </ul>
+
+                    <h3>与其他角色对比</h3>
+                    <p>相较于拥有绝对防御力的“猎狐者”或“黑骑士”，潘多拉牺牲了部分防御力换取了极致的机动性。这意味着潘多拉在正面硬刚时处于劣势，但在拉扯、游击和抢夺关键道具时具有不可替代的作用。</p>
+
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>属性/角色</th>
+                                <th>潘多拉</th>
+                                <th>猎狐者</th>
+                                <th>黑骑士</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>移动速度</td>
+                                <td style="color:var(--accent-gold); font-weight:bold;">极快</td>
+                                <td>快</td>
+                                <td>一般</td>
+                            </tr>
+                            <tr>
+                                <td>跳跃高度</td>
+                                <td>高</td>
+                                <td>高</td>
+                                <td>低</td>
+                            </tr>
+                            <tr>
+                                <td>防弹能力</td>
+                                <td>一般</td>
+                                <td>一般</td>
+                                <td style="color:var(--accent-gold); font-weight:bold;">极高</td>
+                            </tr>
+                            <tr>
+                                <td>适用模式</td>
+                                <td>生化、团队</td>
+                                <td>团队、爆破</td>
+                                <td>生化、团队</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <aside class="sidebar">
+                    <h3>快速导航</h3>
+                    <ul>
+                        <li><a href="#">如何获取潘多拉</a></li>
+                        <li><a href="#">潘多拉皮肤推荐</a></li>
+                        <li><a href="#">潘多拉与雷神搭配</a></li>
+                        <li><a href="#">生化模式地图攻略</a></li>
+                        <li><a href="#">新手入门指南</a></li>
+                    </ul>
+
+                    <h3>热门推荐</h3>
+                    <ul>
+                        <li><a href="#">最新版本更新日志</a></li>
+                        <li><a href="#">生化武器强度排行</a></li>
+                        <li><a href="#">国庆活动汇总</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="container">
+            <div class="section-title">
+                <h2>使用技巧与注意事项</h2>
+            </div>
+            <div class="guide-content">
+                <h3>💡 技巧提示</h3>
+                <p>在使用潘多拉时，建议玩家养成“技能真空期”的走位习惯。由于变身技能有冷却时间，在技能结束后不要急于回防，应利用地形优势寻找掩体，等待技能CD刷新后再进行下一次进攻或撤退。</p>
+                
+                <h3>⚠️ 注意事项</h3>
+                <p>潘多拉在生化模式下虽然强力，但在普通爆破模式中并无特殊加成。请根据地图和模式选择合适的角色，避免在需要稳健防守的爆破局中盲目使用高机动性角色而暴露位置。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>CF攻略站</h4>
+                    <p style="color:var(--text-muted); font-size:0.9rem;">专注于穿越火线（CrossFire）游戏攻略、角色分析、武器评测与资讯更新。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">游戏官网</a></li>
+                        <li><a href="#">社区论坛</a></li>
+                        <li><a href="#">玩家契约</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助支持</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">联系管理员</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 穿越火线攻略站. All Rights Reserved. 本站为玩家攻略站，非腾讯官方站点.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
