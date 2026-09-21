@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="王瑞儿电影-王瑞儿影视作品全集、电影资源推荐与详细剧情介绍。收录王瑞儿主演及参演的影视作品，提供高清观看指南与角色分析。">
+    <meta name="keywords" content="王瑞儿电影,王瑞儿影视,王瑞儿作品,王瑞儿电影推荐,王瑞儿高清电影">
+    <title>王瑞儿电影-影视作品全集与观看指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e50914;
+            --primary-hover: #b20710;
+            --bg-color: #141414;
+            --card-bg: #1f1f1f;
+            --text-main: #ffffff;
+            --text-secondary: #b3b3b3;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+            --border-radius: 4px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(20, 20, 20, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(to top, var(--bg-color), transparent), url('https://picsum.photos/seed/moviehero/1600/900') no-repeat center center/cover;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 60px;
+            margin-bottom: 40px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #ddd;
+            margin-bottom: 24px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--text-secondary);
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-main);
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 24px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .section-link {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .section-link:hover {
+            color: var(--text-main);
+        }
+
+        /* Movie Grid */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .movie-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .poster-wrapper {
+            position: relative;
+            padding-top: 150%; /* 2:3 Aspect Ratio */
+            overflow: hidden;
+        }
+
+        .poster-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .movie-card:hover .poster-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .card-info {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .rating {
+            color: #f5c518;
+        }
+
+        /* Featured Section */
+        .featured-section {
+            background-color: #1a1a1a;
+            padding: 40px 0;
+            margin-bottom: 60px;
+        }
+
+        .featured-layout {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 40px;
+        }
+
+        .featured-poster {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .featured-poster img {
+            width: 100%;
+            display: block;
+        }
+
+        .featured-content h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .featured-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background-color: #333;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .featured-desc {
+            color: #ccc;
+            margin-bottom: 24px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+        .info-item h4 {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+
+        .info-item p {
+            font-size: 1rem;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background-color: #333;
+            border: none;
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            padding: 40px 0;
+            border-top: 1px solid #333;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand p {
+            color: var(--text-secondary);
+            margin-top: 16px;
+            font-size: 0.9rem;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #555;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .featured-layout { grid-template-columns: 1fr; }
+            .info-grid { grid-template-columns: 1fr; gap: 15px; }
+            .header-inner { flex-direction: column; gap: 10px; }
+            .footer-content { grid-template-columns: 1fr; gap: 30px; }
+            nav ul { gap: 16px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
+                </svg>
+                <span>王瑞儿电影</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">电影</a></li>
+                    <li><a href="#">剧集</a></li>
+                    <li><a href="#">高清资源</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>探索王瑞儿的影视世界</h1>
+                <p>汇集王瑞儿主演及参演的精选影视作品，提供高清画质与流畅播放体验。从剧情简介到角色解析，一站式满足您的观影需求。</p>
+                <div>
+                    <a href="#featured" class="btn">立即观看</a>
+                    <a href="#catalog" class="btn btn-outline">查看片单</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Featured Movie -->
+            <section id="featured" class="featured-section">
+                <div class="featured-layout">
+                    <div class="featured-poster">
+                        <img src="https://picsum.photos/seed/errie/600/900" alt="王瑞儿主演电影海报">
+                    </div>
+                    <div class="featured-content">
+                        <div class="featured-tags">
+                            <span class="tag">2023年度热门</span>
+                            <span class="tag">剧情</span>
+                            <span class="tag">爱情</span>
+                        </div>
+                        <h2>光影交织：王瑞儿的银幕魅力</h2>
+                        <p class="featured-desc">
+                            在这部备受瞩目的作品中，王瑞儿展现了极具张力的表演。影片通过细腻的镜头语言，讲述了关于成长、梦想与选择的故事。王瑞儿在片中的表现可圈可点，成功塑造了一个复杂而立体的角色形象，赢得了观众与影评人的广泛好评。
+                        </p>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <h4>导演</h4>
+                                <p>张某某</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>主演</h4>
+                                <p>王瑞儿、李某某</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>上映时间</h4>
+                                <p>2023年10月</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>类型</h4>
+                                <p>剧情 / 爱情</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>时长</h4>
+                                <p>120 分钟</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>评分</h4>
+                                <p>8.5/10</p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 30px;">
+                            <button class="btn">播放正片</button>
+                            <button class="btn btn-outline">加入片单</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filter & Catalog -->
+            <section id="catalog">
+                <div class="section-header">
+                    <h2 class="section-title">王瑞儿电影全集</h2>
+                    <a href="#" class="section-link">查看全部 &rarr;</a>
+                </div>
+
+                <div class="filter-bar">
+                    <button class="filter-btn active">全部</button>
+                    <button class="filter-btn">电影</button>
+                    <button class="filter-btn">电视剧</button>
+                    <button class="filter-btn">微电影</button>
+                    <button class="filter-btn">MV作品</button>
+                </div>
+
+                <div class="movie-grid">
+                    <!-- Movie Card 1 -->
+                    <article class="movie-card">
+                        <div class="poster-wrapper">
+                            <img src="https://picsum.photos/seed/errie1/300/450" alt="王瑞儿电影海报">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">梦回那年夏天</h3>
+                            <div class="card-meta">
+                                <span>2023</span>
+                                <span class="rating">★ 9.2</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Movie Card 2 -->
+                    <article class="movie-card">
+                        <div class="poster-wrapper">
+                            <img src="https://picsum.photos/seed/errie2/300/450" alt="王瑞儿电影海报">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">城市边缘的微光</h3>
+                            <div class="card-meta">
+                                <span>2022</span>
+                                <span class="rating">★ 8.8</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Movie Card 3 -->
+                    <article class="movie-card">
+                        <div class="poster-wrapper">
+                            <img src="https://picsum.photos/seed/errie3/300/450" alt="王瑞儿电影海报">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">追逐风的少女</h3>
+                            <div class="card-meta">
+                                <span>2021</span>
+                                <span class="rating">★ 8.5</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Movie Card 4 -->
+                    <article class="movie-card">
+                        <div class="poster-wrapper">
+                            <img src="https://picsum.photos/seed/errie4/300/450" alt="王瑞儿电影海报">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">爱在日落时分</h3>
+                            <div class="card-meta">
+                                <span>2020</span>
+                                <span class="rating">★ 8.0</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Movie Card 5 -->
+                    <article class="movie-card">
+                        <div class="poster-wrapper">
+                            <img src="https://picsum.photos/seed/errie5/300/450" alt="王瑞儿电影海报">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">无声的呐喊</h3>
+                            <div class="card-meta">
+                                <span>2019</span>
+                                <span class="rating">★ 7.9</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Movie Card 6 -->
+                    <article class="movie-card">
+                        <div class="poster-wrapper">
+                            <img src="https://picsum.photos/seed/errie6/300/450" alt="王瑞儿电影海报">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">逆流而上的鱼</h3>
+                            <div class="card-meta">
+                                <span>2018</span>
+                                <span class="rating">★ 8.1</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section style="margin-bottom: 60px;">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题</h2>
+                </div>
+                <div style="background: var(--card-bg); padding: 24px; border-radius: var(--border-radius);">
+                    <details style="margin-bottom: 12px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--text-main);">王瑞儿的最新电影是什么？</summary>
+                        <p style="margin-top: 10px; color: var(--text-secondary); padding-left: 10px; border-left: 2px solid var(--primary-color);">
+                            目前收录的最新作品包括《梦回那年夏天》等，建议关注本站更新动态以获取最新资讯。
+                        </p>
+                    </details>
+                    <details style="margin-bottom: 12px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--text-main);">在哪里可以观看高清的王瑞儿电影？</summary>
+                        <p style="margin-top: 10px; color: var(--text-secondary); padding-left: 10px; border-left: 2px solid var(--primary-color);">
+                            本站提供正版高清播放渠道，支持多种分辨率选择，确保观影体验流畅稳定。
+                        </p>
+                    </details>
+                    <details style="margin-bottom: 12px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--text-main);">王瑞儿还有哪些代表作品？</summary>
+                        <p style="margin-top: 10px; color: var(--text-secondary); padding-left: 10px; border-left: 2px solid var(--primary-color);">
+                            除了上述列表，王瑞儿还参演了多部影视剧及微电影，涵盖剧情、爱情等多种类型。
+                        </p>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span>王瑞儿电影</span>
+                    </a>
+                    <p>专注于为影迷提供最全、最新的王瑞儿影视作品资源与深度解析。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页推荐</a></li>
+                        <li><a href="#">最新上映</a></li>
+                        <li><a href="#">高分榜单</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源分类</h4>
+                    <ul>
+                        <li><a href="#">电影</a></li>
+                        <li><a href="#">电视剧</a></li>
+                        <li><a href="#">微电影</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 王瑞儿电影资源站 版权所有.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的交互逻辑：筛选按钮切换
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // 移除所有激活状态
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // 激活当前按钮
+                    btn.classList.add('active');
+                    
+                    // 这里可以添加实际的筛选逻辑，例如过滤电影卡片
+                    // 为演示效果，仅做简单的控制台输出
+                    console.log('筛选类别切换为:', btn.innerText);
+                });
+            });
+
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
